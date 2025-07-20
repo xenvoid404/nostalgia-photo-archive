@@ -1,0 +1,73 @@
+@import 'tailwindcss';
+
+:root {
+    --background: #ffffff;
+    --foreground: #171717;
+
+    --cyber-purple: oklch(51.62% 0.256 282.97);
+    --cyber-purple-light: oklch(71.62% 0.186 282.97);
+    --cyber-purple-dark: oklch(31.62% 0.326 282.97);
+
+    --cyber-pink: oklch(61.34% 0.309 329.33);
+    --cyber-pink-light: oklch(81.34% 0.219 329.33);
+    --cyber-pink-dark: oklch(41.34% 0.399 329.33);
+
+    --cyber-blue: oklch(75.28% 0.224 221.44);
+    --cyber-blue-light: oklch(85.28% 0.154 221.44);
+    --cyber-blue-dark: oklch(55.28% 0.294 221.44);
+}
+
+@theme inline {
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+
+    --color-cyber-purple: var(--cyber-purple);
+    --color-cyber-purple-light: var(--cyber-purple-light);
+    --color-cyber-purple-dark: var(--cyber-purple-dark);
+
+    --color-cyber-pink: var(--cyber-pink);
+    --color-cyber-pink-light: var(--cyber-pink-light);
+    --color-cyber-pink-dark: var(--cyber-pink-dark);
+
+    --color-cyber-blue: var(--cyber-blue);
+    --color-cyber-blue-light: var(--cyber-blue-light);
+    --color-cyber-blue-dark: var(--cyber-blue-dark);
+
+    --color-font-sans: var(--font-geist-sans);
+    --color-font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: #0a0a0a;
+        --foreground: #ededed;
+
+        --cyber-purple: oklch(51.62% 0.256 282.97);
+        --cyber-purple-light: oklch(71.62% 0.186 282.97);
+        --cyber-purple-dark: oklch(31.62% 0.326 282.97);
+
+        --cyber-pink: oklch(61.34% 0.309 329.33);
+        --cyber-pink-light: oklch(81.34% 0.219 329.33);
+        --cyber-pink-dark: oklch(41.34% 0.399 329.33);
+
+        --cyber-blue: oklch(75.28% 0.224 221.44);
+        --cyber-blue-light: oklch(85.28% 0.154 221.44);
+        --cyber-blue-dark: oklch(55.28% 0.294 221.44);
+    }
+}
+
+body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.radial-gradient {
+    background: radial-gradient(circle at 50% 50%, rgba(124, 58, 237, 0.2) 0%, rgba(17, 24, 39, 0) 60%);
+}
+
+.text-gradient {
+    background: linear-gradient(to right, var(--cyber-pink), var(--cyber-purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

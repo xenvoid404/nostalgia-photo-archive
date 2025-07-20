@@ -1,0 +1,16 @@
+services:
+    memory:
+        container_name: memory
+        build: .
+        restart: always
+        ports:
+            - '3000:3000'
+        volumes:
+            - .:/app
+            - /app/node_modules
+        working_dir: /app
+        environment:
+            - NODE_ENV=development
+            - WATCHPACK_POLLING=true
+            - WATCHPACK_POLLING_INTERVAL=1000
+        command: ['pnpm', 'next', 'dev', '--turbopack', '-H', '0.0.0.0', '-p', '3000']
