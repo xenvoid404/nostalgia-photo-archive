@@ -3,7 +3,7 @@ import { ThemeToggle } from '@/app/components/theme-toggle';
 
 export function Header() {
     return (
-        <header className="sticky top-0 z-50 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 bg-white/80 dark:bg-black/80 transition-colors">
+        <header className="sticky top-0 z-50 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 bg-white/80 dark:bg-gray-950/80 transition-colors">
             <div className="container flex mx-auto py-4 px-4 items-center justify-between">
                 <div className="flex items-center space-x-2">
                     <div className="w-8 h-8 rounded-full bg-gradient-to-br from-cyber-pink to-cyber-purple flex items-center justify-center">
@@ -17,16 +17,18 @@ export function Header() {
                     </div>
                     <span className="text-xl font-bold text-gradient">Our Story</span>
                 </div>
-                <nav className="hidden md:flex space-x-6 items-center">
-                    <Link href="#" className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors">
-                        Memories
-                    </Link>
-                    <Link href="#" className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors">
-                        Gallery
-                    </Link>
-                    <Link href="#" className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors">
-                        Timeline
-                    </Link>
+                <nav className="flex items-center space-x-4 md:space-x-6">
+                    <div className="hidden md:flex space-x-6">
+                        <Link href="#" className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors">
+                            Memories
+                        </Link>
+                        <Link href="#" className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors">
+                            Gallery
+                        </Link>
+                        <Link href="#" className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors">
+                            Timeline
+                        </Link>
+                    </div>
 
                     <ThemeToggle />
 
