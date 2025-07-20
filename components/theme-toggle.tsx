@@ -1,10 +1,22 @@
 'use client';
 
-import { useTheme } from '@/app/contexts/theme-context';
-import { Sun, Moon } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Moon, Sun } from 'lucide-react';
+import { useTheme } from 'next-themes';
 
 export function ThemeToggle() {
-    const { resolvedTheme, toggleTheme } = useTheme();
+    const [mounted, setMounted] = useState(false);
+    const { resolvedTheme, setTheme } = useTheme();
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    if (!mounted) return null; // Tunggu sampai client siap
+
+    const toggleTheme = () => {
+        setTheme(resolvedTheme === 'dark' ? 'light' : 'dark');
+    };
 
     return (
         <button

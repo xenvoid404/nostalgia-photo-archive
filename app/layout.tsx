@@ -1,6 +1,6 @@
 import * as React from 'react';
 import type { Metadata } from 'next';
-import { ThemeProvider } from '@/app/contexts/theme-context';
+import { ThemeProvider } from '@/components/theme-provider';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -16,7 +16,9 @@ export default function RootLayout({
     return (
         <html lang="en" suppressHydrationWarning>
             <body className="font-sans antialiased min-h-screen relative overflow-x-hidden">
-                <ThemeProvider>{children}</ThemeProvider>
+                <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+                    {children}
+                </ThemeProvider>
             </body>
         </html>
     );

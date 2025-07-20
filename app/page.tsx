@@ -1,13 +1,18 @@
-import { BackgroundElement } from '@/app/components/background-element';
-import { Header } from '@/app/components/header';
-import { MobileSidebar } from '@/app/components/mobile-sidebar';
+'use client';
+
+import { BackgroundElement } from '@/components/background-element';
+import { Header } from '@/components/header';
+import { MobileSidebar } from '@/components/mobile-sidebar';
+import { useState } from 'react';
 
 export default function Home() {
+    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
     return (
         <>
             <BackgroundElement />
-            <Header />
-            <MobileSidebar />
+            <Header onOpenSidebar={() => setIsSidebarOpen(true)} />
+            <MobileSidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
         </>
     );
 }
