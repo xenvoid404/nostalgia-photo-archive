@@ -17,6 +17,18 @@
     --cyber-blue-dark: oklch(55.28% 0.294 221.44);
 }
 
+.dark {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not(.light) {
+        --background: #0a0a0a;
+        --foreground: #ededed;
+    }
+}
+
 @theme inline {
     --color-background: var(--background);
     --color-foreground: var(--foreground);
@@ -37,29 +49,13 @@
     --color-font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --background: #0a0a0a;
-        --foreground: #ededed;
-
-        --cyber-purple: oklch(51.62% 0.256 282.97);
-        --cyber-purple-light: oklch(71.62% 0.186 282.97);
-        --cyber-purple-dark: oklch(31.62% 0.326 282.97);
-
-        --cyber-pink: oklch(61.34% 0.309 329.33);
-        --cyber-pink-light: oklch(81.34% 0.219 329.33);
-        --cyber-pink-dark: oklch(41.34% 0.399 329.33);
-
-        --cyber-blue: oklch(75.28% 0.224 221.44);
-        --cyber-blue-light: oklch(85.28% 0.154 221.44);
-        --cyber-blue-dark: oklch(55.28% 0.294 221.44);
-    }
-}
-
 body {
     background: var(--background);
     color: var(--foreground);
     font-family: Arial, Helvetica, sans-serif;
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
 }
 
 .radial-gradient {
@@ -70,4 +66,5 @@ body {
     background: linear-gradient(to right, var(--cyber-pink), var(--cyber-purple));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    background-clip: text;
 }

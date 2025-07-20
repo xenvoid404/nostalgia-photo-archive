@@ -1,5 +1,6 @@
 import * as React from 'react';
 import type { Metadata } from 'next';
+import { ThemeProvider } from '@/app/contexts/theme-context';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -13,8 +14,10 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en">
-            <body className="font-sans antialiased min-h-screen relative overflow-x-hidden">{children}</body>
+        <html lang="en" suppressHydrationWarning>
+            <body className="font-sans antialiased min-h-screen relative overflow-x-hidden">
+                <ThemeProvider>{children}</ThemeProvider>
+            </body>
         </html>
     );
 }
