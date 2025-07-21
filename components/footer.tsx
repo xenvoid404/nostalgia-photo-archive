@@ -7,7 +7,7 @@ export function Footer() {
         <footer className="border-t border-gray-800 pt-12 pb-8 bg-gray-900/50 backdrop-blur-lg">
             <div className="container mx-auto px-4">
                 <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-                    <div className="text-gradient text-2xl font-bold">Our Story</div>
+                    <div className="text-gradient text-2xl font-bold">Nostalgist</div>
 
                     <div className="flex flex-wrap justify-center gap-6">
                         <FooterLink href="#">About</FooterLink>

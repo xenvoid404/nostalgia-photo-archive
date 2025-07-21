@@ -1,24 +1,30 @@
 import { ReactNode } from 'react';
 import type { Metadata } from 'next';
+import { Rajdhani } from 'next/font/google';
 import { ThemeProvider } from '@/components/theme-provider';
 import './globals.css';
 
+const rajdhani = Rajdhani({
+    subsets: ['latin'],
+    weight: ['400', '600', '700']
+});
+
 export const metadata: Metadata = {
-    title: 'Our Story - Digital Memory Archive',
+    title: 'Nostalgist - Digital Memory Archive',
     description: 'Rekam jejak kenangan sekolah menengah dalam bentuk galeri foto, timeline interaktif, dan soundtrack nostalgia',
     keywords: ['kenangan sekolah', 'galeri foto nostalgia', 'timeline kenangan', 'memory archive', 'sekolah menengah', 'nostalgia musik'],
     authors: [{ name: 'Xenvoid 404' }],
     openGraph: {
-        title: 'Our Story - Digital Memory Archive',
+        title: 'Nostalgist - Digital Memory Archive',
         description: 'Rekam jejak kenangan sekolah menengah dalam bentuk galeri foto, timeline interaktif, dan soundtrack nostalgia',
-        url: 'https://ourstory.example.com',
-        siteName: 'Our Story',
+        url: 'https://esempe.web.id',
+        siteName: 'Nostalgist',
         images: [
             {
-                url: 'https://ourstory.example.com/og-image.jpg',
+                url: 'https://esempe.web.id/og-image.jpg',
                 width: 1200,
                 height: 630,
-                alt: 'Our Story - Digital Memory Archive'
+                alt: 'Nostalgist - Digital Memory Archive'
             }
         ],
         locale: 'id_ID',
@@ -26,9 +32,9 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Our Story - Digital Memory Archive',
+        title: 'Nostalgist - Digital Memory Archive',
         description: 'Rekam jejak kenangan sekolah menengah dalam bentuk galeri foto, timeline interaktif, dan soundtrack nostalgia',
-        images: ['https://ourstory.example.com/og-image.jpg']
+        images: ['https://esempe.web.id/og-image.jpg']
     },
     robots: {
         index: true,
@@ -49,7 +55,7 @@ export const metadata: Metadata = {
         apple: '/apple-touch-icon.png'
     },
     manifest: '/site.webmanifest',
-    metadataBase: new URL('https://ourstory.example.com'),
+    metadataBase: new URL('https://esempe.web.id'),
     alternates: {
         canonical: '/'
     },
@@ -65,13 +71,13 @@ export default function RootLayout({
     children: ReactNode;
 }>) {
     return (
-        <html lang="en" suppressHydrationWarning>
+        <html lang="en" className={`${rajdhani.className} scroll-smooth`} suppressHydrationWarning>
             <head>
                 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
                 <link rel="preconnect" href="https://storage.googleapis.com" crossOrigin="anonymous" />
             </head>
-            <body className="font-sans antialiased min-h-screen relative overflow-x-hidden">
+            <body className="font-[var(--font-rajdhani)] antialiased min-h-screen relative overflow-x-hidden">
                 <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
                     {children}
                 </ThemeProvider>
