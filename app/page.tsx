@@ -6,6 +6,9 @@ import { MobileSidebar } from '@/components/mobile-sidebar';
 import { HeroSection } from '@/components/hero-section';
 import { MusicPlayer } from '@/components/music-player';
 import { MemoryFragments } from '@/components/memory-fragments';
+import { Timeline } from '@/components/timeline';
+import { TechStack } from '@/components/tech-stack';
+import { Footer } from '@/components/footer';
 
 export default function Home() {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -18,6 +21,9 @@ export default function Home() {
             <HeroSection />
             <MusicPlayer />
             <MemoryFragments />
+            <Timeline />
+            <TechStack />
+            <Footer />
         </>
     );
 }
