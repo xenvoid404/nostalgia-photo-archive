@@ -61,7 +61,7 @@ export function MemoryFragments() {
     );
 }
 
-function MemoryCard({ album, onClick }: { album: Album; onClick: () => void }) {
+function MemoryCard({ album, onClick }: { album: Album | null; onClick: () => void }) {
     return (
         <div
             onClick={onClick}
@@ -83,7 +83,7 @@ function MemoryCard({ album, onClick }: { album: Album; onClick: () => void }) {
     );
 }
 
-function MemoryModal({ memory, onClose }: { memory: Album; onClose: () => void }) {
+function MemoryModal({ memory, onClose }: { memory: Album | null; onClose: () => void }) {
     if (!memory) return null;
 
     return (
