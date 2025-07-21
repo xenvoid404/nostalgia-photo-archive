@@ -14,16 +14,20 @@ export default function Home() {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
     return (
-        <>
+        <main>
             <BackgroundElement />
             <Header onOpenSidebar={() => setIsSidebarOpen(true)} />
             <MobileSidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
-            <HeroSection />
-            <MusicPlayer />
-            <MemoryFragments />
-            <Timeline />
-            <TechStack />
+
+            <div className="space-y-16 pb-16">
+                <HeroSection />
+                <MusicPlayer />
+                <MemoryFragments />
+                <Timeline />
+                <TechStack />
+            </div>
+
             <Footer />
-        </>
+        </main>
     );
 }

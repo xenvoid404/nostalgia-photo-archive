@@ -1,11 +1,12 @@
 import Link from 'next/link';
+import { ReactNode } from 'react';
 import { ThemeToggle } from '@/components/theme-toggle';
 
 export function Header({ onOpenSidebar }: { onOpenSidebar: () => void }) {
     return (
         <header className="sticky top-0 z-50 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 bg-white/80 dark:bg-gray-950/95 transition-colors">
-            <div className="container flex mx-auto py-4 px-4 items-center justify-between">
-                <div className="flex items-center space-x-2">
+            <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+                <Link href="/" className="flex items-center space-x-2">
                     <div className="w-8 h-8 rounded-full bg-gradient-to-br from-cyber-pink to-cyber-purple flex items-center justify-center">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white" viewBox="0 0 20 20" fill="currentColor">
                             <path
@@ -16,24 +17,20 @@ export function Header({ onOpenSidebar }: { onOpenSidebar: () => void }) {
                         </svg>
                     </div>
                     <span className="text-xl font-bold text-gradient">Our Story</span>
-                </div>
+                </Link>
+
                 <nav className="flex items-center space-x-4 md:space-x-6">
                     <div className="hidden md:flex space-x-6">
-                        <Link href="#" className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors">
-                            Memories
-                        </Link>
-                        <Link href="#" className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors">
-                            Gallery
-                        </Link>
-                        <Link href="#" className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors">
-                            Timeline
-                        </Link>
+                        <NavLink href="#">Memories</NavLink>
+                        <NavLink href="#">Gallery</NavLink>
+                        <NavLink href="#">Timeline</NavLink>
                     </div>
 
                     <ThemeToggle />
 
                     <button
                         onClick={onOpenSidebar}
+                        aria-label="Open menu"
                         className="md:hidden text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors"
                     >
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -43,5 +40,13 @@ export function Header({ onOpenSidebar }: { onOpenSidebar: () => void }) {
                 </nav>
             </div>
         </header>
+    );
+}
+
+function NavLink({ href, children }: { href: string; children: ReactNode }) {
+    return (
+        <Link href={href} className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors">
+            {children}
+        </Link>
     );
 }

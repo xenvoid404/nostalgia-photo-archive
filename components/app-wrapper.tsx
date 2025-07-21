@@ -1,9 +1,8 @@
 'use client';
-import React from 'react';
 import { motion } from 'framer-motion';
-import { useState, useEffect } from 'react';
+import { ReactNode, useState, useEffect } from 'react';
 
-export function AppWrapper({ children }: { children: React.ReactNode }) {
+export function AppWrapper({ children }: { children: ReactNode }) {
     const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
