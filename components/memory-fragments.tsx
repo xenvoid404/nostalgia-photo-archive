@@ -56,12 +56,12 @@ export function MemoryFragments() {
                 </div>
             )}
 
-            <MemoryModal memory={selectedMemory} onClose={closeModal} />
+            {selectedMemory && <MemoryModal memory={selectedMemory} onClose={closeModal} />}
         </section>
     );
 }
 
-function MemoryCard({ album, onClick }: { album: Album | null; onClick: () => void }) {
+function MemoryCard({ album, onClick }: { album: Album; onClick: () => void }) {
     return (
         <div
             onClick={onClick}
@@ -83,9 +83,7 @@ function MemoryCard({ album, onClick }: { album: Album | null; onClick: () => vo
     );
 }
 
-function MemoryModal({ memory, onClose }: { memory: Album | null; onClose: () => void }) {
-    if (!memory) return null;
-
+function MemoryModal({ memory, onClose }: { memory: Album; onClose: () => void }) {
     return (
         <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4">
             <div className="relative bg-gray-900 border-2 border-cyber-purple rounded-xl w-full max-w-4xl max-h-[90vh] overflow-y-auto">
