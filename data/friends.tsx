@@ -1,0 +1,140 @@
+const friends = [
+    {
+        id: 1,
+        name: 'Afni',
+        full_name: 'Afni Febriyanti',
+        profile_photo: '/friends/afni-febriyanti/profile.jpg'
+    },
+    {
+        id: 2,
+        name: 'Anjar',
+        full_name: 'Anjar Dwi Pangestu',
+        profile_photo: '/friends/anjar-dwi-pangestu/profile.jpg'
+    },
+    {
+        id: 3,
+        name: 'Aji',
+        full_name: 'Aji',
+        profile_photo: '/friends/aji/profile.jpg'
+    },
+    {
+        id: 4,
+        name: 'Dani',
+        full_name: 'Danianto Rivaldi',
+        profile_photo: '/friends/danianto-rivaldi/profile.jpg'
+    },
+    {
+        id: 5,
+        name: 'Dea',
+        full_name: 'Dea Fatika Sari',
+        profile_photo: '/friends/dea-fatika-sari/profile.jpg'
+    },
+    {
+        id: 6,
+        name: 'Eka',
+        full_name: 'De Eka Mahesa',
+        profile_photo: '/friends/de-eka-mahesa/profile.jpg'
+    },
+    {
+        id: 7,
+        name: 'Devi',
+        full_name: 'Devi Apriyanti',
+        profile_photo: '/friends/devi-apriyanti/profile.jpg'
+    },
+    {
+        id: 8,
+        name: 'Devi',
+        full_name: 'Devi Sevtiani',
+        profile_photo: '/friends/devi-sevtiani/profile.jpg'
+    },
+    {
+        id: 9,
+        name: 'Ima',
+        full_name: 'Ima Amanatul Khikmah',
+        profile_photo: '/friends/ima-amanatul-khikmah/profile.jpg'
+    },
+    {
+        id: 10,
+        name: 'Iwan',
+        full_name: 'Iwan Setiawan',
+        profile_photo: '/friends/iwan-setiawan/profile.jpg'
+    },
+    {
+        id: 11,
+        name: 'Kelvin',
+        full_name: 'Kelvin Andrianto',
+        profile_photo: '/friends/kelvin-andrianto/profile.jpg'
+    },
+    {
+        id: 12,
+        name: 'Herul',
+        full_name: 'Khoerul Mustofa',
+        profile_photo: '/friends/khoerul-mustofa/profile.jpg'
+    },
+    {
+        id: 13,
+        name: 'Naim',
+        full_name: 'Naimatun Khasanah',
+        profile_photo: '/friends/naimatun-khasanah/profile.jpg'
+    },
+    {
+        id: 14,
+        name: 'Mut',
+        full_name: 'Nur Mutmainah',
+        profile_photo: '/friends/nur-mutmainah/profile.jpg'
+    },
+    {
+        id: 15,
+        name: 'Jihan',
+        full_name: 'Nur Zihan',
+        profile_photo: '/friends/nur-zihan/profile.jpg'
+    },
+    {
+        id: 16,
+        name: 'Puput',
+        full_name: 'Puput Aji Saputra',
+        profile_photo: '/friends/puput-aji-saputra/profile.jpg'
+    },
+    {
+        id: 17,
+        name: 'Rendi',
+        full_name: 'Rendi',
+        profile_photo: '/friends/rendi/profile.jpg'
+    },
+    {
+        id: 18,
+        name: 'Susan',
+        full_name: 'Susan Rizkiana',
+        profile_photo: '/friends/susan-rizkiana/profile.jpg'
+    },
+    {
+        id: 19,
+        name: 'Susi',
+        full_name: 'Susi Rizkiani',
+        profile_photo: '/friends/susi-rizkiani/profile.jpg'
+    },
+    {
+        id: 20,
+        name: 'Santi',
+        full_name: 'Susanti',
+        profile_photo: '/friends/susanti/profile.jpg'
+    },
+    {
+        id: 21,
+        name: 'Ulul',
+        full_name: 'Ulul Fahmi',
+        profile_photo: '/friends/ulul-fahmi/profile.jpg'
+    },
+    {
+        id: 22,
+        name: 'Wendi',
+        full_name: 'Wendi Anderika',
+        profile_photo: '/friends/wendi-anderika/profile.jpg'
+    },
+    {
+        id: 23,
+        name: 'Jenal',
+        full_name: 'Zaenal Mutakin',
+        profile_photo: '/friends/zaenal-mutakin/profile.jpg'
+    }
+];

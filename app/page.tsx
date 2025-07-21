@@ -7,7 +7,7 @@ import { HeroSection } from '@/components/hero-section';
 import { MusicPlayer } from '@/components/music-player';
 import { MemoryFragments } from '@/components/memory-fragments';
 import { Timeline } from '@/components/timeline';
-import { FrienNetwork } from '@/components/friend-network';
+import { FriendNetwork } from '@/components/friend-network';
 import { TechStack } from '@/components/tech-stack';
 import { Footer } from '@/components/footer';
 
@@ -25,7 +25,7 @@ export default function Home() {
                 <MusicPlayer />
                 <MemoryFragments />
                 <Timeline />
-                <FrienNetwork />
+                <FriendNetwork />
                 <TechStack />
             </div>
 
