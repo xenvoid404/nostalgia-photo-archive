@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { ReactNode } from 'react';
 import type { Metadata } from 'next';
 import { ThemeProvider } from '@/components/theme-provider';
 import { AppWrapper } from '@/components/app-wrapper';
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
 export default function RootLayout({
     children
 }: Readonly<{
-    children: React.ReactNode;
+    children: ReactNode;
 }>) {
     return (
         <html lang="en" suppressHydrationWarning>
@@ -74,7 +74,7 @@ export default function RootLayout({
             </head>
             <body className="font-sans antialiased min-h-screen relative overflow-x-hidden">
                 <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-                    <AppWrapper>{children}</AppWrapper>
+                    {children}
                 </ThemeProvider>
             </body>
         </html>

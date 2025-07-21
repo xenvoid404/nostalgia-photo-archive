@@ -9,13 +9,10 @@ export function HeroSection() {
                     <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
                         <span className="text-gradient">Junior High School Times</span>
                     </h1>
-                    <p className="text-xl text-gray-300 mb-8 max-w-lg">
+                    <p className="text-xl text-gray-300 mb-2 max-w-lg">
                         Mari kita buka kembali lembaran lama yang nyaris terlupakan. Temukan potongan kecil dari hidupmu—tawa, air mata, dan cerita
                         yang sederhana. Karena di sinilah, kenangan itu masih menunggu untuk dikenang kembali.
                     </p>
-                    <button className="px-6 py-3 bg-gradient-to-r from-cyber-cosmic-light to-cyber-nebula-dark rounded-lg font-medium hover:opacity-90 transition-opacity shadow-lg shadow-cyber-purple">
-                        Explore Now
-                    </button>
                 </div>
 
                 {/* Image Content */}
