@@ -10,7 +10,7 @@ export function BackgroundElement() {
                             src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/fbcf2584-9faf-40c9-a2c4-1d048f8cc03b.png"
                             alt="Abstract cyberpunk grid lines in purple hues blending into the background"
                             fill
-                            className="absolute bottom-0 left-0 w-full opacity-10 mix-blend-overlay"
+                            className="absolute bottom-0 left-0 w-full opacity-20 mix-blend-overlay"
                         />
                     </div>
                 </div>
