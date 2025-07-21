@@ -11,7 +11,7 @@ interface Album {
 
 export function MemoryFragments() {
     const [showAll, setShowAll] = useState(false);
-    const [selectedMemory, setSelectedMemory] = useState<Album>(null);
+    const [selectedMemory, setSelectedMemory] = useState<Album | null>(null);
     const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
