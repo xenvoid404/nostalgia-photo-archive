@@ -9,6 +9,15 @@ type Song = {
     url: string;
 };
 
+const songs: Song[] = [
+    {
+        id: '1',
+        title: 'Stay Tonight Slowed - Reggae',
+        artist: 'Chung Ha',
+        url: '/music/stay_to_night.mp3'
+    }
+];
+
 export function MusicPlayer() {
     const [isPlaying, setIsPlaying] = useState(false);
     const [currentSong, setCurrentSong] = useState<Song | null>(null);
@@ -16,20 +25,11 @@ export function MusicPlayer() {
     const [isMuted, setIsMuted] = useState(false);
     const audioRef = useRef<HTMLAudioElement | null>(null);
 
-    const songs: Song[] = [
-        {
-            id: '1',
-            title: 'Stay Tonight Slowed - Reggae',
-            artist: 'Chung Ha',
-            url: '/music/stay_to_night.mp3'
-        }
-    ];
-
     useEffect(() => {
         if (!currentSong && songs.length > 0) {
             setCurrentSong(songs[0]);
         }
-    }, []);
+    }, [currentSong]);
 
     useEffect(() => {
         if (!audioRef.current) return;

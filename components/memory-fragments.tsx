@@ -2,9 +2,16 @@ import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import albumsData from '@/data/albums.json';
 
+interface Album {
+    id: number;
+    title: string;
+    filename: string;
+    description: string;
+}
+
 export function MemoryFragments() {
     const [showAll, setShowAll] = useState(false);
-    const [selectedMemory, setSelectedMemory] = useState<any>(null);
+    const [selectedMemory, setSelectedMemory] = useState<Album>(null);
     const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
@@ -16,7 +23,7 @@ export function MemoryFragments() {
 
     const displayedAlbums = showAll ? shuffleArray(albumsData) : shuffleArray(albumsData).slice(0, isMobile ? 3 : 6);
 
-    const openModal = (memory: any) => {
+    const openModal = (memory: Album) => {
         setSelectedMemory(memory);
         document.body.style.overflow = 'hidden';
     };
@@ -54,7 +61,7 @@ export function MemoryFragments() {
     );
 }
 
-function MemoryCard({ album, onClick }: { album: any; onClick: () => void }) {
+function MemoryCard({ album, onClick }: { album: Album; onClick: () => void }) {
     return (
         <div
             onClick={onClick}
@@ -76,7 +83,7 @@ function MemoryCard({ album, onClick }: { album: any; onClick: () => void }) {
     );
 }
 
-function MemoryModal({ memory, onClose }: { memory: any; onClose: () => void }) {
+function MemoryModal({ memory, onClose }: { memory: Album; onClose: () => void }) {
     if (!memory) return null;
 
     return (
@@ -119,6 +126,6 @@ function MemoryModal({ memory, onClose }: { memory: any; onClose: () => void }) 
     );
 }
 
-function shuffleArray(array: any[]) {
+function shuffleArray(array: Album[]) {
     return [...array].sort(() => Math.random() - 0.5);
 }
