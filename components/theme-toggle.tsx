@@ -31,7 +31,7 @@ export function ThemeToggle() {
                     initial={{ rotate: -90, opacity: 0, scale: 0.6 }}
                     animate={{ rotate: 0, opacity: 1, scale: 1 }}
                     exit={{ rotate: 90, opacity: 0, scale: 0.6 }}
-                    tranition={{ duration: 0.3 }}
+                    transition={{ duration: 0.3 }}
                     className="absolute"
                 >
                     {resolvedTheme === 'dark' ? (
