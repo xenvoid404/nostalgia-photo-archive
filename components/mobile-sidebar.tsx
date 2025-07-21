@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { ReactNode } from 'react';
 import { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X } from 'lucide-react';
+import type { Variants } from 'framer-motion';
 
 export function MobileSidebar({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
     useEffect(() => {
@@ -13,7 +13,7 @@ export function MobileSidebar({ isOpen, onClose }: { isOpen: boolean; onClose: (
         };
     }, [isOpen]);
 
-    const sidebarVariants = {
+    const sidebarVariants: Variants = {
         hidden: { opacity: 0, x: '100%' },
         visible: {
             opacity: 1,
@@ -34,7 +34,7 @@ export function MobileSidebar({ isOpen, onClose }: { isOpen: boolean; onClose: (
         }
     };
 
-    const menuItemVariants = {
+    const menuItemVariants: Variants = {
         hidden: { opacity: 0, y: 20 },
         visible: (i: number) => ({
             opacity: 1,
@@ -61,7 +61,9 @@ export function MobileSidebar({ isOpen, onClose }: { isOpen: boolean; onClose: (
                     <div className="flex flex-col h-full px-6 py-4">
                         <div className="flex justify-end mb-8">
                             <button onClick={onClose} aria-label="Close menu" className="text-gray-300 hover:text-white z-50">
-                                <X className="h-6 w-6" />
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                                </svg>
                             </button>
                         </div>
 
