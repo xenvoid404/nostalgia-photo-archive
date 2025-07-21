@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export function HeroSection() {
     return (
-        <div className="relative py-32 md:py-42 overflow-hidden">
+        <div className="relative mt-32 md:mt-42 overflow-hidden">
             <div className="container mx-auto px-4 mx-auto flex flex-col md:flex-row items-center">
                 <div className="md:w-1/2 mb-12 md:mb-0 relative z-10">
                     <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">

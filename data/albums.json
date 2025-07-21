@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "title": "Waktu di Antara Tanah dan Tawa",
+        "description": "Hari itu, kami bukan cuma menanam bunga—kami menanam kenangan. Tertawa, berpeluh, dan saling mengejek dengan cara yang cuma bisa dimengerti oleh teman satu kelas. Rasanya kayak kemarin, padahal udah bertahun-tahun. Kamu masih ingat bau tanahnya?",
+        "filename": "/albums/gardening.jpeg"
+    },
+    {
+        "id": 1,
+        "title": "Nyambung Kabel, Nyambung Ingatan",
+        "description": "kabel kusut, tangan belepotan, dan satu lampu yang akhirnya nyala—diiringi sorakan kayak baru nyetak gol. Di balik percobaan paralel dan seri ini, ada kenangan soal kerja tim, debat kecil, dan rasa puas waktu berhasil. Waktu itu kita cuma pengin nilai bagus... tapi ternyata, yang paling nyala adalah kenangannya.",
+        "filename": "/albums/working-project.jpeg"
+    }
+]
