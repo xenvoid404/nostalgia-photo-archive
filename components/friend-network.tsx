@@ -32,6 +32,8 @@ export function FriendNetwork({ friends: friendsProp }: FriendNetworkProps) {
                             <Image
                                 src={friend.profile_photo || `https://api.dicebear.com/9.x/avataaars/svg`}
                                 alt={`${friend.name}'s profile`}
+                                width={400}
+                                height={400}
                                 className="w-full h-full object-cover"
                                 onError={e => {
                                     (e.target as HTMLImageElement).src = `https://api.dicebear.com/9.x/avataaars/svg`;
