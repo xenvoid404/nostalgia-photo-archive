@@ -4,6 +4,10 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
+    --circle-size: 0%;
+    --x: 0;
+    --y: 0;
+    --color: transparent;
     --cyber-purple: oklch(51.62% 0.256 282.97);
     --cyber-purple-light: oklch(71.62% 0.186 282.97);
     --cyber-purple-dark: oklch(31.62% 0.326 282.97);
@@ -188,4 +192,23 @@ body {
     body {
         @apply bg-background text-foreground;
     }
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color);
+    clip-path: circle(var(--circle-size) at var(--x) var(--y));
+    z-index: 9999;
+    pointer-events: none;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+body.animate-theme-change::before {
+    opacity: 0.9;
 }

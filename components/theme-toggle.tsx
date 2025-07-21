@@ -1,9 +1,10 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { MouseEvent, useState, useEffect } from 'react';
 import { Moon, Sun } from 'lucide-react';
 import { useTheme } from 'next-themes';
 import { motion, AnimatePresence } from 'framer-motion';
+import gsap from 'gsap';
 
 export function ThemeToggle() {
     const [mounted, setMounted] = useState(false);
@@ -15,8 +16,28 @@ export function ThemeToggle() {
 
     if (!mounted) return null;
 
-    const toggleTheme = () => {
-        setTheme(resolvedTheme === 'dark' ? 'light' : 'dark');
+    const toggleTheme = (e: MouseEvent) => {
+        const { clientX, clientY } = e;
+        const newTheme = resolvedTheme === 'dark' ? 'light' : 'dark';
+        const body = document.body;
+
+        body.style.setProperty('--x', `${clientX}px`);
+        body.style.setProperty('--y', `${clientY}px`);
+        body.style.setProperty('--color', newTheme === 'dark' ? '#1f2937' : '#f3f4f6');
+
+        gsap.to(body, {
+            '--circle-size': '150%',
+            duration: 0.8,
+            ease: 'power2.inOut',
+            onComplete: () => {
+                setTheme(newTheme);
+                gsap.to(body, {
+                    '--circle-size': '0%',
+                    duration: 0.3,
+                    delay: 0.1
+                });
+            }
+        });
     };
 
     return (
